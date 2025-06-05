@@ -6,10 +6,11 @@ import {
 } from 'lucide-react';
 
 export const NAV_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#case-studies", label: "Projects" }, // Points to Case Studies section
-  { href: "#resume", label: "Resume" }, // Requires a section with id="resume"
-  { href: "#contact", label: "Contact" }, // Requires a section with id="contact"
+  { href: "#story", label: "My Story" },
+  { href: "#journey", label: "Product Journey" },
+  { href: "#case-studies", label: "Case Studies" },
+  { href: "#skills", label: "Skills" },
+  { href: "#metrics", label: "Impact" },
 ];
 
 export const HERO_INFO = {
@@ -209,8 +210,9 @@ export const FOOTER_INFO = {
   name: "Subhra Das",
   socialLinks: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/subhra-das-pm/", icon: Linkedin },
-    { name: "Telegram", url: "https://t.me/your_telegram_username", icon: Send }, // Add your Telegram URL
-    { name: "Message", url: "mailto:your_email@example.com", icon: MessageSquare }, // Add your contact email
+    { name: "Telegram", url: "https://t.me/your_telegram_username", icon: Send }, 
+    { name: "Message", url: "mailto:your_email@example.com", icon: MessageSquare }, 
   ],
   copyright: `© ${new Date().getFullYear()} Subhra Das. All rights reserved.`
 };
+
