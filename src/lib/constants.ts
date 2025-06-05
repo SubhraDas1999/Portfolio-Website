@@ -1,5 +1,8 @@
 import type { LucideIcon } from 'lucide-react';
-import { Briefcase, Zap, Users, BarChart3, Cpu, Database, Figma, FileJson, GitMerge, LineChart, ListChecks, Palette, PieChart, Scaling, Lightbulb, Rocket, Target, TrendingUp, UserCheck, Settings2, SearchCode } from 'lucide-react';
+import { 
+  Briefcase, Zap, Users, BarChart3, Cpu, Database, Figma, FileText, GitMerge, LineChart, ListChecks, Palette, PieChart, Scaling, Lightbulb, Rocket, Target, TrendingUp, Award, Settings2, SearchCode,
+  Linkedin, Twitter, BrainCircuit, Megaphone, Users2, DatabaseZap, Palette as PaletteIcon, Search, Landmark, LayoutPanelLeft, FilePlus2, Cog, Construction, BarChartBig, MessageSquare, ClipboardList, DraftingCompass, Projector, Image as ImageIcon
+} from 'lucide-react';
 
 export const NAV_LINKS = [
   { href: "#home", label: "Home" },
@@ -15,147 +18,136 @@ export const NAV_LINKS = [
 export const HERO_INFO = {
   name: "Subhra Das",
   title: "Product Manager",
-  subtitle: "Crafting impactful digital experiences for B2C & B2B in Fintech and SME Tech.",
+  subtitle: "Entrepreneur turned Product Manager. Built Zyadashop (0 to 100K+ downloads, acquired by Mosambee). Expert in UX, data, and strategy for driving growth.",
   cta: "Explore My Journey"
 };
 
 export const CAREER_MILESTONES = [
   {
-    id: "startup",
-    title: "The Leap: Zyadashop",
-    year: "2019-2021",
-    description: "Co-founded Zyadashop, a B2B e-commerce platform. Led product from concept to market, achieving significant user adoption and growth.",
+    id: "appyflux",
+    title: "Zero to One: Founding Zyadashop",
+    year: "2020-2022",
+    description: "Co-founded Appyflux and built Zyadashop, a B2B e-commerce platform, from concept to 100K+ downloads and a 4.2-star rating. Led product strategy, UI/UX, and GTM, achieving 300% MAU growth.",
     image: "https://placehold.co/1200x800.png",
-    dataAiHint: "startup team",
+    dataAiHint: "startup launch",
     icon: Rocket,
-    details: "Key Learnings: 0 to 1 product development, agile methodologies, user acquisition strategies, team building."
+    details: "Key Achievements: 4K+ merchants in 1 month, 10K web merchants in 2 months, 80% DAU increase post HUL/IDEO pilot."
   },
   {
     id: "acquisition",
-    title: "Milestone: Acquisition by Mosambee",
-    year: "2021",
-    description: "Successfully navigated Zyadashop's acquisition by Mosambee, a leading fintech company. Integrated product lines and teams.",
+    title: "Strategic Acquisition by Mosambee",
+    year: "2022",
+    description: "Successfully led Zyadashop through its acquisition by Mosambee, a leading fintech company. Oversaw the integration of Zyadashop’s SME commerce tools into Mosambee's Mod91 platform.",
     image: "https://placehold.co/1200x800.png",
-    dataAiHint: "business handshake",
-    icon: Target,
-    details: "Key Learnings: M&A processes, post-merger integration, strategic alignment, stakeholder management."
+    dataAiHint: "business merger",
+    icon: Briefcase,
+    details: "Impact: Boosted Mod91's B2B capabilities and achieved a 40% increase in client adoption post-integration."
   },
   {
-    id: "scaling",
-    title: "Growth Phase: Scaling at Mosambee",
-    year: "2021-Present",
-    description: "Driving product growth at Mosambee, focusing on innovative fintech solutions for SMEs. Leading cross-functional teams to deliver high-impact features.",
+    id: "mosambee_apm",
+    title: "Product Leadership at Mosambee",
+    year: "June 2022 – Present",
+    description: "As Associate Product Manager, drove key product initiatives including Mod91's webView & iOS app development (enabling Tap-to-Pay in UAE), and optimized Mosambee’s landing page (50% traffic increase).",
     image: "https://placehold.co/1200x800.png",
-    dataAiHint: "growth chart",
+    dataAiHint: "fintech innovation",
     icon: TrendingUp,
-    details: "Key Learnings: Scaling products, data-driven decision making, enterprise product management, market expansion."
+    details: "Further Impact: Reduced client queries by 50% via strategic documentation and automated Zyadashop ops, cutting manual effort by 80%."
   },
   {
-    id: "fellowship",
-    title: "Recognition: PM Fellowship & Awards",
-    year: "2020-2022",
-    description: "Acknowledged for product leadership and innovation. Finalist in Y Combinator 2020, NSA 2021, and Google App Scale Academy 2022. Ranked 1st in NextLeap PM Fellowship.",
+    id: "achievements",
+    title: "Industry Recognition & Fellowship",
+    year: "2020-Present",
+    description: "Consistently recognized for product excellence. Google Play’s Best Apps of 2022 (Hidden Gems - Zyadashop). Finalist in Y Combinator 2020, NSA 2021, and Google’s App Scale Academy 2022.",
     image: "https://placehold.co/1200x800.png",
-    dataAiHint: "award ceremony",
-    icon: UserCheck,
-    details: "Key Learnings: Advanced PM frameworks, leadership development, networking with industry experts."
-  },
-  {
-    id: "next",
-    title: "What's Next?",
-    year: "Future",
-    description: "Eager to leverage my experience to build and scale innovative products that solve real-world problems. Passionate about AI, Web3, and sustainable tech.",
-    image: "https://placehold.co/1200x800.png",
-    dataAiHint: "future technology",
-    icon: Lightbulb,
-    details: "Currently exploring new opportunities and side projects in emerging technologies."
+    dataAiHint: "awards display",
+    icon: Award,
+    details: "Ranked 1st among 350+ candidates in NextLeap PM Fellowship (Graduation Project Score: 274/300)."
   }
 ];
 
 export const ZYADASHOP_JOURNEY = [
   {
     id: "1",
-    date: "2019 Q2",
+    date: "2020 Q1",
     title: "Idea & Inception",
-    description: "Identified gap in B2B SME procurement. Zyadashop concept born.",
+    description: "Identified B2B SME procurement gap. Zyadashop concept born, MVP planning.",
     icon: Lightbulb,
-    metrics: ["Market Research", "MVP Planning"]
+    metrics: ["Market Research", "UX Design"]
   },
   {
     id: "2",
-    date: "2019 Q4",
-    title: "MVP Launch",
-    description: "Launched Zyadashop MVP to early adopters. Gathered initial feedback.",
+    date: "2020 Q2",
+    title: "MVP Launch & Rapid Merchant Acquisition",
+    description: "Launched Zyadashop MVP. Acquired 4K+ merchants in 1 month with a 70% signup conversion rate.",
     icon: Rocket,
-    metrics: ["100+ Beta Users", "Iterative Development"]
+    metrics: ["4K+ Merchants", "70% Conversion"]
   },
   {
     id: "3",
-    date: "2020 Q2",
-    title: "Growth & Traction",
-    description: "Scaled user base, enhanced features based on feedback. YC Finalist recognition.",
+    date: "2020 Q4 - 2021 Q1",
+    title: "Scaling Users & Web Platform",
+    description: "Scaled user base, achieved 300% MAU growth. Recognized as YC Finalist. Launched Zyadashop Web, onboarding 10K merchants in 2 months.",
     icon: TrendingUp,
-    metrics: ["10K+ Downloads", "Feature Expansion"]
+    metrics: ["300% MAU Growth", "10K Web Merchants", "YC Finalist"]
   },
   {
     id: "4",
-    date: "2020 Q4",
-    title: "MAU Surge",
-    description: "Achieved 300% MAU growth through targeted marketing and product improvements.",
-    icon: Users,
-    metrics: ["300% MAU Growth", "Improved Retention"]
+    date: "2021 Q2 - Q4",
+    title: "100K Downloads & National Recognition",
+    description: "Crossed 100K downloads with a 4.2-star rating. Finalist in NSA & Google App Scale Academy.",
+    icon: Zap,
+    metrics: ["100K+ Downloads", "4.2 Rating", "National Recognition"]
   },
   {
     id: "5",
-    date: "2021 Q2",
-    title: "Road to 100K",
-    description: "Crossed the 100K downloads milestone. NSA & Google App Scale Academy Finalist.",
-    icon: Zap,
-    metrics: ["100K+ Downloads", "National Recognition"]
+    date: "2022 Q2",
+    title: "Google Play's Best Apps Award",
+    description: "Zyadashop recognized in Google Play’s Best Apps of 2022 (India - Hidden Gems category).",
+    icon: Award,
+    metrics: ["Google Play Award", "Sustained Growth"]
   },
   {
     id: "6",
-    date: "2021 Q3",
+    date: "2022 Q2",
     title: "Acquisition by Mosambee",
-    description: "Zyadashop acquired by Mosambee, marking a new chapter.",
+    description: "Appyflux (Zyadashop) acquired by Mosambee, strengthening its SME tech solutions market foothold.",
     icon: Briefcase,
-    metrics: ["Successful Exit", "Strategic Integration"]
+    metrics: ["Successful Acquisition", "Strategic Integration"]
   }
 ];
 
 export const CASE_STUDIES_DATA = [
   {
     id: "1",
-    title: "Fintech Product Revamp for SME Lending",
-    description: "Led the redesign of a key lending product at Mosambee, improving user experience and conversion rates.",
+    title: "BookMyShow: Auction Ticketing & E-Verification",
+    description: "Designed an auction-based ticketing system and DigiLocker e-verification for high-demand events on BookMyShow to improve fan participation and reduce black market sales.",
     image: "https://placehold.co/600x400.png",
-    dataAiHint: "fintech app",
-    tags: ["Fintech", "UX/UI", "B2B"],
+    dataAiHint: "event tickets concert",
+    tags: ["Conceptual", "UX Design", "Problem Solving"],
     links: [
-      { label: "View on Notion", url: "#" , icon: FileJson}, // Replace with actual link
-      { label: "Figma Prototype", url: "#" , icon: Figma},   // Replace with actual link
+      { label: "View Details", url: "#", icon: FileText },
     ]
   },
   {
     id: "2",
-    title: "Zyadashop: 0 to 100K Downloads Journey",
-    description: "Detailed case study on building and scaling Zyadashop, covering product strategy, growth hacking, and challenges.",
+    title: "Zomato: Smart Notification Text Reviews",
+    description: "Developed a concept for a smart notification system for Zomato, allowing users to submit food reviews directly via phone/smartwatch prompts to increase review engagement.",
     image: "https://placehold.co/600x400.png",
-    dataAiHint: "mobile app",
-    tags: ["Startup", "Growth", "B2B E-commerce"],
+    dataAiHint: "food app notification",
+    tags: ["Conceptual", "Mobile UX", "Engagement"],
     links: [
-      { label: "Read on Medium", url: "#" , icon: FileJson}, // Replace with actual link
+      { label: "View Details", url: "#", icon: FileText },
     ]
   },
   {
     id: "3",
-    title: "Automating SME Onboarding Process",
-    description: "Designed and implemented an automated onboarding system, reducing manual effort by 50% and improving TAT.",
+    title: "Goibibo: AI-Powered Travel Planner (GoPlanner)",
+    description: "Conceptualized 'GoPlanner,' an AI-powered travel planning assistant for Goibibo, enabling users to chat, speak, or build trips for seamless itinerary creation and booking.",
     image: "https://placehold.co/600x400.png",
-    dataAiHint: "automation workflow",
-    tags: ["Automation", "SME Tech", "Process Improvement"],
+    dataAiHint: "travel planning ai",
+    tags: ["Conceptual", "AI/ML", "TravelTech"],
     links: [
-      { label: "Google Slides Deck", url: "#", icon: FileJson }, // Replace with actual link
+      { label: "View Details", url: "#", icon: FileText },
     ]
   }
 ];
@@ -171,53 +163,55 @@ export const PM_SKILLS: Skill[] = [
   { name: "Jira", icon: ListChecks, level: 95 },
   { name: "Mixpanel", icon: BarChart3, level: 85 },
   { name: "Figma", icon: Figma, level: 90 },
-  { name: "Google Analytics", icon: PieChart, level: 80 },
-  { name: "Agile Methodology", icon: Zap, level: 95 },
   { name: "Product Strategy", icon: Target, level: 90 },
-  { name: "Data Analysis", icon: LineChart, level: 85 },
-  { name: "User Research", icon: Users, level: 90 },
-  { name: "API Design", icon: GitMerge, level: 75 },
-  { name: "A/B Testing", icon: Scaling, level: 80 },
   { name: "Roadmapping", icon: Settings2, level: 90 },
+  { name: "UI/UX Design", icon: PaletteIcon, level: 85 },
+  { name: "Data-Driven Decision", icon: DatabaseZap, level: 90 },
+  { name: "User Research", icon: Users, level: 90 },
+  { name: "A/B Testing", icon: Scaling, level: 80 },
+  { name: "Agile Methodology", icon: Zap, level: 95 },
+  { name: "Gen AI Tools", icon: BrainCircuit, level: 80 },
+  { name: "GTM Strategy", icon: Megaphone, level: 85 },
+  { name: "Stakeholder Mgt.", icon: Users2, level: 85 },
+  { name: "Amplitude", icon: BarChartBig, level: 80 },
 ];
 
 export const METRICS_DATA = [
-  { id: "downloads", label: "App Downloads", value: 100000, suffix: "+", description: "Zyadashop" },
-  { id: "dau", label: "DAU Increase", value: 80, suffix: "%", description: "Key Product Initiative" },
-  { id: "effort", label: "Manual Effort Reduction", value: 50, suffix: "%", description: "Automation Project" },
-  { id: "mau", label: "MAU Growth (Zyadashop)", value: 300, suffix: "%", description: "During peak scaling" },
+  { id: "downloads", label: "Zyadashop Downloads", value: 100000, suffix: "+", description: "Reached organically in 1.5 years" },
+  { id: "mau", label: "MAU Growth (Zyadashop)", value: 300, suffix: "%", description: "Achieved within one year" },
+  { id: "automation", label: "Ops Automation", value: 80, suffix: "%", description: "Manual effort reduction" },
+  { id: "adoption", label: "Client Adoption (Mod91)", value: 40, suffix: "%", description: "Post-Zyadashop tools integration" },
 ];
 
 export const EXPLORING_NOW_DATA = [
   {
     id: "1",
-    title: "Advanced SQL for Product Analytics",
-    description: "Deepening SQL skills for complex cohort analysis and funnel optimization. Building custom dashboards.",
-    icon: Database,
-    tags: ["SQL", "Data Analysis", "Product Analytics"]
+    title: "NextLeap PM Fellowship",
+    description: "Top Fellow (Rank 1/350+). Honing advanced PM skills through intensive projects and mentorship. (July 2024 – Oct 2024)",
+    icon: Award,
+    tags: ["PM Fellowship", "Leadership", "Advanced PM"]
   },
   {
     id: "2",
-    title: "AI Recommendation System for Swiggy (Concept)",
-    description: "Exploring the architecture and algorithms behind a personalized AI-driven recommendation engine for a food delivery platform.",
+    title: "AI in Product Management",
+    description: "Exploring practical applications of GenAI and ML in product development, personalization, and analytics. Experimenting with GenAI tools for PM workflows.",
     icon: Cpu,
-    tags: ["AI/ML", "Recommendation Systems", "Concept Project"]
+    tags: ["AI/ML", "GenAI", "Product Innovation"]
   },
   {
     id: "3",
-    title: "Web3 & Decentralized Technologies",
-    description: "Learning about blockchain fundamentals, smart contracts, and potential applications in fintech and identity.",
-    icon: SearchCode,
-    tags: ["Web3", "Blockchain", "Emerging Tech"]
+    title: "Advanced Data Analysis & SQL",
+    description: "Deepening expertise in SQL and data analysis techniques for complex user behavior insights, cohort analysis, and data-informed product strategies.",
+    icon: Database,
+    tags: ["Data Analysis", "SQL", "Product Analytics"]
   }
 ];
 
 export const FOOTER_INFO = {
   name: "Subhra Das",
   socialLinks: [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/subhra-das-pm/", icon: Users }, // Example, use appropriate icons
-    { name: "Twitter", url: "https://x.com/subhradasq", icon: Users }, // Example
-    { name: "Medium", url: "#", icon: Users } // Example
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/subhra-das-pm/", icon: Linkedin },
+    { name: "Twitter", url: "https://x.com/subhradasq", icon: Twitter },
   ],
   copyright: `© ${new Date().getFullYear()} Subhra Das. All rights reserved.`
 };

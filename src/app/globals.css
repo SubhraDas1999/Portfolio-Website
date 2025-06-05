@@ -9,54 +9,6 @@ body {
 
 @layer base {
   :root {
-    --background: 210 25% 96%; /* Light gray #F0F4F8 */
-    --foreground: 210 29% 17%; /* Darker slate blue for text */
-
-    --muted: 210 25% 88%; 
-    --muted-foreground: 210 25% 45%;
-
-    --popover: 210 25% 100%; 
-    --popover-foreground: 210 29% 17%;
-
-    --card: 210 25% 100%; 
-    --card-foreground: 210 29% 17%;
-
-    --border: 210 20% 86%;
-    --input: 210 20% 88%;
-
-    --primary: 210 29% 24%; /* Deep slate blue #2C3E50 */
-    --primary-foreground: 0 0% 98%; /* White */
-
-    --secondary: 210 25% 80%; 
-    --secondary-foreground: 210 29% 20%;
-
-    --accent: 180 100% 50%; /* Vivid cyan #00FFFF */
-    --accent-foreground: 210 29% 10%; /* Dark text for accent */
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --ring: 180 100% 45%; /* Slightly darker cyan for rings for better visibility */
-    --radius: 0.5rem;
-
-    /* Sidebar colors - adjusted to fit the theme */
-    --sidebar-background: 210 29% 18%; /* Darker slate for sidebar */
-    --sidebar-foreground: 210 25% 85%;
-    --sidebar-primary: 180 100% 50%; /* Cyan for active items */
-    --sidebar-primary-foreground: 210 29% 10%;
-    --sidebar-accent: 210 29% 22%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 29% 28%;
-    --sidebar-ring: 180 100% 50%;
-
-    --chart-1: 210 29% 40%;
-    --chart-2: 180 100% 35%;
-    --chart-3: 210 29% 60%;
-    --chart-4: 180 100% 65%;
-    --chart-5: 210 29% 80%;
-  }
-
-  .dark {
     --background: 210 29% 10%; /* Very dark slate blue */
     --foreground: 0 0% 98%; /* White text */
 
@@ -85,17 +37,18 @@ body {
     --destructive-foreground: 0 0% 98%;
 
     --ring: 180 100% 50%;
+    --radius: 0.5rem;
 
-    /* Sidebar dark colors */
+    /* Sidebar colors - adjusted to fit the theme */
     --sidebar-background: 210 29% 6%;
     --sidebar-foreground: 210 25% 75%;
-    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary: 180 100% 50%; /* Cyan for active items */
     --sidebar-primary-foreground: 210 29% 10%;
     --sidebar-accent: 210 29% 12%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 210 29% 15%;
     --sidebar-ring: 180 100% 50%;
-    
+
     --chart-1: 210 29% 70%;
     --chart-2: 180 100% 60%;
     --chart-3: 210 29% 50%;
