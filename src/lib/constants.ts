@@ -7,9 +7,9 @@ import {
 
 export const NAV_LINKS = [
   { href: "#home", label: "Home" },
-  { href: "#case-studies", label: "Projects" }, // "Projects" now points to case studies
-  { href: "#resume", label: "Resume" }, // New resume link
-  { href: "#contact", label: "Contact" }, // New contact link
+  { href: "#case-studies", label: "Projects" }, // Points to Case Studies section
+  { href: "#resume", label: "Resume" }, // Requires a section with id="resume"
+  { href: "#contact", label: "Contact" }, // Requires a section with id="contact"
 ];
 
 export const HERO_INFO = {
