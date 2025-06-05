@@ -20,7 +20,7 @@ export const HERO_INFO = {
   title: "Product Manager",
   subtitle: "Entrepreneur turned Product Manager. Built Zyadashop (0 to 100K+ downloads, acquired by Mosambee). Expert in UX, data, and strategy for driving growth.",
   cta: "Explore My Journey",
-  profileImageUrl: "/assets/profile.png" // Updated to local path
+  profileImageUrl: "/assets/profile.png"
 };
 
 export const CAREER_MILESTONES = [
@@ -29,7 +29,7 @@ export const CAREER_MILESTONES = [
     title: "Zero to One: Founding Zyadashop",
     year: "2020-2022",
     description: "Co-founded Appyflux and built Zyadashop, a B2B e-commerce platform, from concept to 100K+ downloads and a 4.2-star rating. Led product strategy, UI/UX, and GTM, achieving 300% MAU growth.",
-    image: "https://placehold.co/800x600.png",
+    image: "/assets/career-appyflux.png",
     dataAiHint: "startup launch office",
     icon: Rocket,
     details: "Key Achievements: 4K+ merchants in 1 month, 10K web merchants in 2 months, 80% DAU increase post HUL/IDEO pilot."
@@ -39,7 +39,7 @@ export const CAREER_MILESTONES = [
     title: "Strategic Acquisition by Mosambee",
     year: "2022",
     description: "Successfully led Zyadashop through its acquisition by Mosambee, a leading fintech company. Oversaw the integration of Zyadashop’s SME commerce tools into Mosambee's Mod91 platform.",
-    image: "https://placehold.co/800x600.png",
+    image: "/assets/career-acquisition.png",
     dataAiHint: "business merger handshake",
     icon: Briefcase,
     details: "Impact: Boosted Mod91's B2B capabilities and achieved a 40% increase in client adoption post-integration."
@@ -49,7 +49,7 @@ export const CAREER_MILESTONES = [
     title: "Product Leadership at Mosambee",
     year: "June 2022 – Present",
     description: "As Associate Product Manager, drove key product initiatives including Mod91's webView & iOS app development (enabling Tap-to-Pay in UAE), and optimized Mosambee’s landing page (50% traffic increase).",
-    image: "https://placehold.co/800x600.png",
+    image: "/assets/career-mosambee.png",
     dataAiHint: "fintech innovation team",
     icon: TrendingUp,
     details: "Further Impact: Reduced client queries by 50% via strategic documentation and automated Zyadashop ops, cutting manual effort by 80%."
@@ -59,7 +59,7 @@ export const CAREER_MILESTONES = [
     title: "Industry Recognition & Fellowship",
     year: "2020-Present",
     description: "Consistently recognized for product excellence. Google Play’s Best Apps of 2022 (Hidden Gems - Zyadashop). Finalist in Y Combinator 2020, NSA 2021, and Google’s App Scale Academy 2022.",
-    image: "https://placehold.co/800x600.png",
+    image: "/assets/career-achievements.png",
     dataAiHint: "awards display certificates",
     icon: Award,
     details: "Ranked 1st among 350+ candidates in NextLeap PM Fellowship (Graduation Project Score: 274/300)."
@@ -122,7 +122,7 @@ export const CASE_STUDIES_DATA = [
     id: "1",
     title: "BookMyShow: Auction Ticketing & E-Verification",
     description: "Designed an auction-based ticketing system and DigiLocker e-verification for high-demand events on BookMyShow to improve fan participation and reduce black market sales.",
-    image: "https://placehold.co/600x400.png",
+    image: "/assets/case-study-bms.png",
     dataAiHint: "event tickets concert",
     tags: ["Conceptual", "UX Design", "Problem Solving"],
     links: [
@@ -133,7 +133,7 @@ export const CASE_STUDIES_DATA = [
     id: "2",
     title: "Zomato: Smart Notification Text Reviews",
     description: "Developed a concept for a smart notification system for Zomato, allowing users to submit food reviews directly via phone/smartwatch prompts to increase review engagement.",
-    image: "https://placehold.co/600x400.png",
+    image: "/assets/case-study-zomato.png",
     dataAiHint: "food app notification",
     tags: ["Conceptual", "Mobile UX", "Engagement"],
     links: [
@@ -144,7 +144,7 @@ export const CASE_STUDIES_DATA = [
     id: "3",
     title: "Goibibo: AI-Powered Travel Planner (GoPlanner)",
     description: "Conceptualized 'GoPlanner,' an AI-powered travel planning assistant for Goibibo, enabling users to chat, speak, or build trips for seamless itinerary creation and booking.",
-    image: "https://placehold.co/600x400.png",
+    image: "/assets/case-study-goibibo.png",
     dataAiHint: "travel planning ai",
     tags: ["Conceptual", "AI/ML", "TravelTech"],
     links: [
@@ -216,3 +216,4 @@ export const FOOTER_INFO = {
   ],
   copyright: `© ${new Date().getFullYear()} Subhra Das. All rights reserved.`
 };
+

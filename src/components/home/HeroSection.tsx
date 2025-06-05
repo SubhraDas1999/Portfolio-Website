@@ -14,14 +14,15 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="/assets/hero-background.png"
           alt="Abstract background"
           layout="fill"
           objectFit="cover"
           className="opacity-5"
           data-ai-hint="dark abstract"
+          priority
         />
-        <div className="absolute inset-0 bg-background opacity-70"></div> {/* Increased opacity for darker effect */}
+        <div className="absolute inset-0 bg-background opacity-70"></div>
       </div>
 
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -64,3 +65,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
