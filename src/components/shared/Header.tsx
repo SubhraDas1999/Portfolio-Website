@@ -1,34 +1,55 @@
 
 import Link from 'next/link';
-import { NAV_LINKS, HERO_INFO } from '@/lib/constants';
+import Image from 'next/image';
+import { NAV_LINKS, FOOTER_INFO, HERO_INFO } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Feather } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6"> {/* Reduced height to h-16 */}
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6">
+        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <Feather className="h-6 w-6 text-primary" />
-          <span className="font-headline text-xl font-bold text-foreground">
-            {HERO_INFO.name}
-          </span>
+          <Image
+            src={HERO_INFO.profileImageUrl}
+            alt={HERO_INFO.name + " logo"}
+            width={40} // Adjust size as needed
+            height={40} // Adjust size as needed
+            className="rounded-full"
+            priority
+            data-ai-hint="logo personal"
+          />
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium"> {/* Adjusted space-x slightly if needed */}
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground transition-colors hover:text-primary py-2" // Changed text color for better visibility and hover
+              className="text-foreground/80 transition-colors hover:text-primary py-2"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="md:hidden">
+        {/* Social Icons - Desktop */}
+        <div className="hidden md:flex items-center space-x-3">
+          {FOOTER_INFO.socialLinks.map((link) => (
+            <Button key={link.name} variant="ghost" size="icon" asChild className="h-8 w-8">
+              <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                <link.icon className="h-5 w-5 text-foreground/70 hover:text-primary" />
+                <span className="sr-only">{link.name}</span>
+              </Link>
+            </Button>
+          ))}
+        </div>
+
+        {/* Mobile Menu Trigger */}
+        <div className="md:hidden flex items-center">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -36,18 +57,33 @@ const Header = () => {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 mt-8">
-                {NAV_LINKS.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary" // Ensured mobile hover also uses primary
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
+              <div className="flex flex-col h-full">
+                <nav className="flex flex-col space-y-4 mt-8 flex-grow">
+                  {NAV_LINKS.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+                {/* Social Icons - Mobile */}
+                <div className="py-6 border-t border-border/40">
+                  <div className="flex justify-center space-x-4">
+                    {FOOTER_INFO.socialLinks.map((link) => (
+                      <Button key={link.name} variant="ghost" size="icon" asChild>
+                        <Link href={link.url} target="_blank" rel="noopener noreferrer">
+                          <link.icon className="h-6 w-6 text-foreground/70 hover:text-primary" />
+                          <span className="sr-only">{link.name}</span>
+                        </Link>
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

@@ -2,17 +2,14 @@
 import type { LucideIcon } from 'lucide-react';
 import {
   Briefcase, Zap, Users, BarChart3, Cpu, Database, Figma, FileText, GitMerge, LineChart, ListChecks, Palette, PieChart, Scaling, Lightbulb, Rocket, Target, TrendingUp, Award, Settings2, SearchCode,
-  Linkedin, Twitter, BrainCircuit, Megaphone, Users2, DatabaseZap, Palette as PaletteIcon, Search, Landmark, LayoutPanelLeft, FilePlus2, Cog, Construction, BarChartBig, MessageSquare, ClipboardList, DraftingCompass, Projector, Image as ImageIcon
+  Linkedin, Twitter, BrainCircuit, Megaphone, Users2, DatabaseZap, Palette as PaletteIcon, Search, Landmark, LayoutPanelLeft, FilePlus2, Cog, Construction, BarChartBig, MessageSquare, ClipboardList, DraftingCompass, Projector, Image as ImageIcon, Send
 } from 'lucide-react';
 
 export const NAV_LINKS = [
   { href: "#home", label: "Home" },
-  { href: "#story", label: "My Story" },
-  { href: "#journey", label: "Product Journey" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#skills", label: "Skills" },
-  { href: "#metrics", label: "Impact" },
-  { href: "#exploring", label: "Exploring" },
+  { href: "#case-studies", label: "Projects" }, // "Projects" now points to case studies
+  { href: "#resume", label: "Resume" }, // New resume link
+  { href: "#contact", label: "Contact" }, // New contact link
 ];
 
 export const HERO_INFO = {
@@ -212,8 +209,8 @@ export const FOOTER_INFO = {
   name: "Subhra Das",
   socialLinks: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/subhra-das-pm/", icon: Linkedin },
-    { name: "Twitter", url: "https://x.com/subhradasq", icon: Twitter },
+    { name: "Telegram", url: "https://t.me/your_telegram_username", icon: Send }, // Add your Telegram URL
+    { name: "Message", url: "mailto:your_email@example.com", icon: MessageSquare }, // Add your contact email
   ],
   copyright: `© ${new Date().getFullYear()} Subhra Das. All rights reserved.`
 };
-
