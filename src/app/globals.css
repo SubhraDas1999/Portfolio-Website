@@ -24,7 +24,7 @@ body {
     --border: 220 20% 90%; /* Light gray border */
     --input: 220 20% 90%;
 
-    --primary: 180 100% 50%; /* Vivid cyan */
+    --primary: 180 90% 40%; /* Darker Cyan */
     --primary-foreground: 210 20% 5%; /* Dark text on cyan for accessibility */
 
     --secondary: 220 20% 94%; /* Another light gray */
@@ -36,18 +36,18 @@ body {
     --destructive: 0 75% 55%; /* Adjusted red for light theme */
     --destructive-foreground: 0 0% 98%; /* White text on red */
 
-    --ring: 180 100% 50%; /* Cyan for ring */
+    --ring: 180 90% 40%; /* Darker Cyan for ring */
     --radius: 0.5rem;
 
     /* Sidebar colors for light theme */
     --sidebar-background: 220 20% 98%;
     --sidebar-foreground: 220 20% 25%;
-    --sidebar-primary: 180 100% 45%; /* Slightly darker cyan for sidebar active */
+    --sidebar-primary: 180 90% 38%; /* Darker cyan for sidebar active */
     --sidebar-primary-foreground: 210 20% 5%;
     --sidebar-accent: 220 20% 92%;
     --sidebar-accent-foreground: 220 20% 12%;
     --sidebar-border: 220 20% 85%;
-    --sidebar-ring: 180 100% 50%;
+    --sidebar-ring: 180 90% 40%; /* Darker Cyan for sidebar ring */
 
     --chart-1: 210 20% 30%;
     --chart-2: 180 100% 40%;
@@ -57,28 +57,28 @@ body {
   }
 
   .dark {
-    --background: 220 10% 2%; /* Very dark, near black, slightly cool */
+    --background: 220 10% 3%; /* Even darker */
     --foreground: 0 0% 98%; /* White text */
 
-    --muted: 220 10% 12%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 220 10% 10%; /* Slightly darker muted */
+    --muted-foreground: 220 10% 65%; /* Slightly lighter muted foreground */
 
-    --popover: 220 10% 8%;
+    --popover: 220 10% 5%; /* Darker popover */
     --popover-foreground: 0 0% 98%;
 
-    --card: 220 10% 8%;
+    --card: 220 10% 6%; /* Darker card */
     --card-foreground: 0 0% 98%;
 
-    --border: 220 10% 15%;
-    --input: 220 10% 15%;
+    --border: 220 10% 12%; /* Darker border */
+    --input: 220 10% 12%; /* Darker input */
 
     --primary: 180 100% 50%; /* Vivid cyan as primary */
     --primary-foreground: 210 29% 10%; /* Dark text on cyan */
 
-    --secondary: 220 10% 18%; /* A bit lighter dark shade for secondary elements */
+    --secondary: 220 10% 15%; /* Darker secondary */
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 220 10% 20%; /* Subtle dark accent */
+    --accent: 220 10% 18%; /* Darker accent */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
