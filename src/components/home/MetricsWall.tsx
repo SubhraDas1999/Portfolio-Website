@@ -11,7 +11,7 @@ const MetricsWall = () => {
         {METRICS_DATA.map((metric) => (
           <Card key={metric.id} className="text-center bg-card/60 backdrop-blur-lg border border-border/20 shadow-xl transform hover:scale-105 transition-transform duration-300">
             <CardHeader>
-              <CardTitle className="font-headline text-5xl md:text-6xl font-extrabold text-[#2C3E50] dark:text-[#00FFFF]">
+              <CardTitle className="font-headline text-5xl md:text-6xl font-extrabold text-[#2b3d4f] dark:text-[#00FFFF]">
                 <AnimatedCounter endValue={metric.value} suffix={metric.suffix} />
               </CardTitle>
             </CardHeader>
