@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-// import Image from 'next/image'; // Removed as no longer used in this file
 import { NAV_LINKS, FOOTER_INFO, HERO_INFO } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -12,7 +11,7 @@ const Header = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2" aria-label={`${HERO_INFO.name} homepage`}>
-          <span className="text-3xl" role="img" aria-label="User icon">👤</span>
+          <span className="text-3xl" role="img" aria-label="Smiling face emoji logo">😊</span>
         </Link>
         
         {/* Desktop Navigation Links */}
