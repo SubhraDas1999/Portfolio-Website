@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center text-center bg-background text-foreground py-20 overflow-hidden"
     >
       <div className="absolute inset-0">
@@ -18,22 +18,23 @@ const HeroSection = () => {
           alt="Abstract background"
           layout="fill"
           objectFit="cover"
-          className="opacity-5" 
+          className="opacity-5"
           data-ai-hint="dark abstract"
         />
         <div className="absolute inset-0 bg-black opacity-30"></div>
       </div>
-      
+
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         {HERO_INFO.profileImageUrl && (
           <div className="mb-8">
             <Image
               src={HERO_INFO.profileImageUrl}
               alt={HERO_INFO.name}
-              width={160} 
+              width={160}
               height={160}
               className="rounded-full border-4 border-primary shadow-lg object-cover"
-              priority 
+              priority
+              unoptimized={true} // Added this prop
             />
           </div>
         )}
