@@ -1,3 +1,4 @@
+
 'use client';
 import { CAREER_MILESTONES } from '@/lib/constants';
 import Image from 'next/image';
@@ -18,7 +19,7 @@ const StoryMode = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 } // Lowered threshold for earlier animation trigger
     );
 
     milestoneRefs.current.forEach((ref) => {
@@ -44,19 +45,18 @@ const StoryMode = () => {
           </p>
         </div>
         
-        <div className="space-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {CAREER_MILESTONES.map((milestone, index) => (
             <div
               key={milestone.id}
               id={`milestone-${milestone.id}`}
               ref={el => milestoneRefs.current[index] = el}
               className={cn(
-                "flex flex-col md:flex-row items-center gap-8 md:gap-12 transition-all duration-1000 ease-out transform",
-                visibleMilestones[`milestone-${milestone.id}`] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-                index % 2 !== 0 && "md:flex-row-reverse" 
+                "flex flex-col transition-all duration-700 ease-out transform",
+                visibleMilestones[`milestone-${milestone.id}`] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               )}
             >
-              <div className="md:w-1/2 relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl mb-6"> {/* Changed aspect ratio, added mb-6 */}
                 <Image
                   src={milestone.image}
                   alt={milestone.title}
@@ -66,29 +66,27 @@ const StoryMode = () => {
                   className="rounded-lg"
                 />
               </div>
-              <div className="md:w-1/2">
-                <Card className="bg-card shadow-xl border-none">
-                  <CardHeader>
-                    <div className="flex items-center gap-4 mb-2">
-                      <milestone.icon className="h-10 w-10 text-accent" />
-                      <div>
-                        <p className="text-sm font-medium text-accent">{milestone.year}</p>
-                        <CardTitle className="font-headline text-2xl md:text-3xl text-primary">
-                          {milestone.title}
-                        </CardTitle>
-                      </div>
+              <Card className="bg-card shadow-xl border-none flex-grow flex flex-col"> {/* Added flex-grow and flex-col for consistent card height in grid */}
+                <CardHeader>
+                  <div className="flex items-start gap-4 mb-2"> {/* Changed to items-start */}
+                    <milestone.icon className="h-10 w-10 text-accent mt-1 flex-shrink-0" /> {/* Added mt-1 and flex-shrink-0 */}
+                    <div>
+                      <p className="text-sm font-medium text-accent">{milestone.year}</p>
+                      <CardTitle className="font-headline text-2xl md:text-3xl text-primary">
+                        {milestone.title}
+                      </CardTitle>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base text-foreground/80 mb-4">
-                      {milestone.description}
-                    </CardDescription>
-                    <p className="text-sm text-muted-foreground italic">
-                      {milestone.details}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-grow"> {/* Added flex-grow */}
+                  <CardDescription className="text-base text-foreground/80 mb-4">
+                    {milestone.description}
+                  </CardDescription>
+                  <p className="text-sm text-muted-foreground italic">
+                    {milestone.details}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           ))}
         </div>

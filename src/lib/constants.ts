@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 import { 
   Briefcase, Zap, Users, BarChart3, Cpu, Database, Figma, FileText, GitMerge, LineChart, ListChecks, Palette, PieChart, Scaling, Lightbulb, Rocket, Target, TrendingUp, Award, Settings2, SearchCode,
@@ -12,14 +13,15 @@ export const NAV_LINKS = [
   { href: "#skills", label: "Skills" },
   { href: "#metrics", label: "Impact" },
   { href: "#exploring", label: "Exploring" },
-  { href: "#optimizer", label: "AI Optimizer" },
+  // { href: "#optimizer", label: "AI Optimizer" }, // Removed AI Optimizer
 ];
 
 export const HERO_INFO = {
   name: "Subhra Das",
   title: "Product Manager",
   subtitle: "Entrepreneur turned Product Manager. Built Zyadashop (0 to 100K+ downloads, acquired by Mosambee). Expert in UX, data, and strategy for driving growth.",
-  cta: "Explore My Journey"
+  cta: "Explore My Journey",
+  profileImageUrl: "https://storage.googleapis.com/project-avatars/Xhe2xdYMSl2s0Q6LAbNCmH5uCVp1/L1Vb5R3l5Wz3y6A5a6c4X.jpg"
 };
 
 export const CAREER_MILESTONES = [
@@ -28,8 +30,8 @@ export const CAREER_MILESTONES = [
     title: "Zero to One: Founding Zyadashop",
     year: "2020-2022",
     description: "Co-founded Appyflux and built Zyadashop, a B2B e-commerce platform, from concept to 100K+ downloads and a 4.2-star rating. Led product strategy, UI/UX, and GTM, achieving 300% MAU growth.",
-    image: "https://placehold.co/1200x800.png",
-    dataAiHint: "startup launch",
+    image: "https://placehold.co/800x600.png", // Adjusted placeholder size
+    dataAiHint: "startup launch office",
     icon: Rocket,
     details: "Key Achievements: 4K+ merchants in 1 month, 10K web merchants in 2 months, 80% DAU increase post HUL/IDEO pilot."
   },
@@ -38,18 +40,18 @@ export const CAREER_MILESTONES = [
     title: "Strategic Acquisition by Mosambee",
     year: "2022",
     description: "Successfully led Zyadashop through its acquisition by Mosambee, a leading fintech company. Oversaw the integration of Zyadashop’s SME commerce tools into Mosambee's Mod91 platform.",
-    image: "https://placehold.co/1200x800.png",
-    dataAiHint: "business merger",
+    image: "https://placehold.co/800x600.png", // Adjusted placeholder size
+    dataAiHint: "business merger handshake",
     icon: Briefcase,
     details: "Impact: Boosted Mod91's B2B capabilities and achieved a 40% increase in client adoption post-integration."
   },
   {
-    id: "mosambee_apm",
+    id: "mosambee_pm",
     title: "Product Leadership at Mosambee",
     year: "June 2022 – Present",
     description: "As Associate Product Manager, drove key product initiatives including Mod91's webView & iOS app development (enabling Tap-to-Pay in UAE), and optimized Mosambee’s landing page (50% traffic increase).",
-    image: "https://placehold.co/1200x800.png",
-    dataAiHint: "fintech innovation",
+    image: "https://placehold.co/800x600.png", // Adjusted placeholder size
+    dataAiHint: "fintech innovation team",
     icon: TrendingUp,
     details: "Further Impact: Reduced client queries by 50% via strategic documentation and automated Zyadashop ops, cutting manual effort by 80%."
   },
@@ -58,8 +60,8 @@ export const CAREER_MILESTONES = [
     title: "Industry Recognition & Fellowship",
     year: "2020-Present",
     description: "Consistently recognized for product excellence. Google Play’s Best Apps of 2022 (Hidden Gems - Zyadashop). Finalist in Y Combinator 2020, NSA 2021, and Google’s App Scale Academy 2022.",
-    image: "https://placehold.co/1200x800.png",
-    dataAiHint: "awards display",
+    image: "https://placehold.co/800x600.png", // Adjusted placeholder size
+    dataAiHint: "awards display certificates",
     icon: Award,
     details: "Ranked 1st among 350+ candidates in NextLeap PM Fellowship (Graduation Project Score: 274/300)."
   }

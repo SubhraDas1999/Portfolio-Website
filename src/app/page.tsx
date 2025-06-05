@@ -1,3 +1,4 @@
+
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import HeroSection from '@/components/home/HeroSection';
@@ -7,7 +8,7 @@ import CaseStudies from '@/components/home/CaseStudies';
 import SkillBoard from '@/components/home/SkillBoard';
 import MetricsWall from '@/components/home/MetricsWall';
 import ExploringNow from '@/components/home/ExploringNow';
-import PortfolioOptimizerSection from '@/components/home/PortfolioOptimizerSection';
+// import PortfolioOptimizerSection from '@/components/home/PortfolioOptimizerSection'; // Removed
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <SkillBoard />
         <MetricsWall />
         <ExploringNow />
-        <PortfolioOptimizerSection />
+        {/* <PortfolioOptimizerSection /> */} {/* Removed */}
       </main>
       <Footer />
     </div>

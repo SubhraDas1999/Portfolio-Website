@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { NAV_LINKS, HERO_INFO } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
@@ -7,7 +8,7 @@ import { Menu, Feather } from 'lucide-react';
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4 md:px-6"> {/* Increased height to h-20 and ensured horizontal padding */}
         <Link href="/" className="flex items-center space-x-2">
           <Feather className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-bold text-foreground">
@@ -15,12 +16,12 @@ const Header = () => {
           </span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium"> {/* Increased space-x for more padding */}
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground/70 transition-colors hover:text-foreground"
+              className="text-foreground/70 transition-colors hover:text-foreground py-2" // Added py-2 for vertical padding on links
             >
               {link.label}
             </Link>
