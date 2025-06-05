@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2" aria-label={`${HERO_INFO.name} homepage`}>
-          <span className="text-3xl" role="img" aria-label="Smiling face emoji logo">😊</span>
+          <span className="text-3xl" role="img" aria-label="Man raising hand emoji logo">🙋🏻‍♂️</span>
         </Link>
         
         {/* Desktop Navigation Links */}
