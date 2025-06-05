@@ -8,7 +8,7 @@ import { Menu, Feather } from 'lucide-react';
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 max-w-screen-2xl items-center justify-between px-4 md:px-6"> {/* Increased height to h-20 and ensured horizontal padding */}
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 md:px-6"> {/* Reduced height to h-16 */}
         <Link href="/" className="flex items-center space-x-2">
           <Feather className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-bold text-foreground">
@@ -16,12 +16,12 @@ const Header = () => {
           </span>
         </Link>
         
-        <nav className="hidden md:flex items-center space-x-8 text-sm font-medium"> {/* Increased space-x for more padding */}
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium"> {/* Adjusted space-x slightly if needed */}
           {NAV_LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground/70 transition-colors hover:text-foreground py-2" // Added py-2 for vertical padding on links
+              className="text-foreground transition-colors hover:text-primary py-2" // Changed text color for better visibility and hover
             >
               {link.label}
             </Link>
@@ -42,7 +42,7 @@ const Header = () => {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
+                    className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary" // Ensured mobile hover also uses primary
                   >
                     {link.label}
                   </Link>

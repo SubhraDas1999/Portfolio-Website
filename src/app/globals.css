@@ -9,44 +9,44 @@ body {
 
 @layer base {
   :root {
-    --background: 210 29% 10%; /* Very dark slate blue */
+    --background: 220 10% 5%; /* Very dark, near black, slightly cool */
     --foreground: 0 0% 98%; /* White text */
 
-    --muted: 210 29% 15%;
-    --muted-foreground: 210 25% 65%;
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 10% 60%;
 
-    --popover: 210 29% 8%;
+    --popover: 220 10% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --card: 210 29% 8%;
+    --card: 220 10% 8%;
     --card-foreground: 0 0% 98%;
 
-    --border: 210 29% 20%;
-    --input: 210 29% 20%;
+    --border: 220 10% 15%;
+    --input: 220 10% 15%;
 
-    --primary: 180 100% 50%; /* Vivid cyan as primary in dark mode */
+    --primary: 180 100% 50%; /* Vivid cyan as primary */
     --primary-foreground: 210 29% 10%; /* Dark text on cyan */
 
-    --secondary: 210 29% 18%;
+    --secondary: 220 10% 18%; /* A bit lighter dark shade for secondary elements */
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 210 29% 24%; /* Deep slate blue as accent in dark mode */
+    --accent: 220 10% 20%; /* Subtle dark accent */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 180 100% 50%;
+    --ring: 180 100% 50%; /* Cyan for ring */
     --radius: 0.5rem;
 
-    /* Sidebar colors - adjusted to fit the theme */
-    --sidebar-background: 210 29% 6%;
-    --sidebar-foreground: 210 25% 75%;
+    /* Sidebar colors - adjusted to fit the new darker theme */
+    --sidebar-background: 220 10% 4%;
+    --sidebar-foreground: 220 10% 70%;
     --sidebar-primary: 180 100% 50%; /* Cyan for active items */
     --sidebar-primary-foreground: 210 29% 10%;
-    --sidebar-accent: 210 29% 12%;
+    --sidebar-accent: 220 10% 10%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 29% 15%;
+    --sidebar-border: 220 10% 8%;
     --sidebar-ring: 180 100% 50%;
 
     --chart-1: 210 29% 70%;
