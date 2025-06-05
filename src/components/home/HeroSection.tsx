@@ -34,7 +34,7 @@ const HeroSection = () => {
               height={160}
               className="rounded-full border-4 border-primary shadow-lg object-cover"
               priority
-              unoptimized={true} // Added this prop
+              data-ai-hint="profile photo" 
             />
           </div>
         )}
