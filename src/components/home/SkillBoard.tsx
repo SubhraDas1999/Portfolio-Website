@@ -18,7 +18,7 @@ const SkillBoard = () => {
             </CardHeader>
             {skill.level && (
             <CardContent className="pt-0">
-                <Progress value={skill.level} aria-label={`${skill.name} proficiency ${skill.level}%`} className="h-2 [&>div]:bg-[#2C3E50] dark:[&>div]:bg-sky-400" />
+                <Progress value={skill.level} aria-label={`${skill.name} proficiency ${skill.level}%`} className="h-2 [&>div]:bg-[#2C3E50] dark:[&>div]:bg-[#00FFFF]" />
             </CardContent>
             )}
           </Card>
