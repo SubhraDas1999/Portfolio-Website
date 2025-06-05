@@ -21,7 +21,7 @@ const HeroSection = () => {
           className="opacity-5"
           data-ai-hint="dark abstract"
         />
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="absolute inset-0 bg-background opacity-70"></div> {/* Increased opacity for darker effect */}
       </div>
 
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
@@ -34,7 +34,7 @@ const HeroSection = () => {
               height={160}
               className="rounded-full border-4 border-primary shadow-lg object-cover"
               priority
-              data-ai-hint="profile photo" 
+              data-ai-hint="profile photo"
             />
           </div>
         )}

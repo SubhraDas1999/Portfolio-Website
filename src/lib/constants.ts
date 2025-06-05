@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { 
+import {
   Briefcase, Zap, Users, BarChart3, Cpu, Database, Figma, FileText, GitMerge, LineChart, ListChecks, Palette, PieChart, Scaling, Lightbulb, Rocket, Target, TrendingUp, Award, Settings2, SearchCode,
   Linkedin, Twitter, BrainCircuit, Megaphone, Users2, DatabaseZap, Palette as PaletteIcon, Search, Landmark, LayoutPanelLeft, FilePlus2, Cog, Construction, BarChartBig, MessageSquare, ClipboardList, DraftingCompass, Projector, Image as ImageIcon
 } from 'lucide-react';
@@ -20,7 +20,7 @@ export const HERO_INFO = {
   title: "Product Manager",
   subtitle: "Entrepreneur turned Product Manager. Built Zyadashop (0 to 100K+ downloads, acquired by Mosambee). Expert in UX, data, and strategy for driving growth.",
   cta: "Explore My Journey",
-  profileImageUrl: "https://placehold.co/160x160.png" // Placeholder image
+  profileImageUrl: "/assets/profile.png" // Updated to local path
 };
 
 export const CAREER_MILESTONES = [
