@@ -9,10 +9,12 @@ import SkillBoard from '@/components/home/SkillBoard';
 import MetricsWall from '@/components/home/MetricsWall';
 import ExploringNow from '@/components/home/ExploringNow';
 // import PortfolioOptimizerSection from '@/components/home/PortfolioOptimizerSection'; // Removed
+import MysticRevealOverlay from '@/components/shared/MysticRevealOverlay'; // Added import
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <MysticRevealOverlay /> {/* Added component */}
       <Header />
       <main className="flex-grow">
         <HeroSection />

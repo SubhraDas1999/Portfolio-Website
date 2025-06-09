@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useTransition } from 'react';
@@ -6,7 +7,7 @@ import type { PortfolioOptimizerOutput } from '@/ai/flows/portfolio-optimizer';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, Wand2 } from 'lucide-react'; // Added Wand2
 import { useToast } from '@/hooks/use-toast';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -91,7 +92,7 @@ export default function PortfolioOptimizerClient() {
               </>
             ) : (
               <>
-                <Sparkles className="mr-2 h-4 w-4" />
+                <Wand2 className="mr-2 h-4 w-4" /> {/* Changed icon */}
                 Get Suggestions
               </>
             )}
