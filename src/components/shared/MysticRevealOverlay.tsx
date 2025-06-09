@@ -3,11 +3,13 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Sparkles } from 'lucide-react';
+import { Wand2 } from 'lucide-react'; // Using Wand2 for the central magical item
 
-type Phase = 'initial' | 'fading' | 'hidden';
+type Phase = 'initial' | 'wandVisible' | 'bursting' | 'fading' | 'hidden';
 
-const MYSTIC_REVEAL_KEY = 'mysticRevealPlayed_v2'; // Updated key for new version
+const MYSTIC_REVEAL_KEY = 'mysticRevealPlayed_v3'; // New key for the updated animation
+
+const NUM_PARTICLES = 15;
 
 export default function MysticRevealOverlay() {
   const [phase, setPhase] = useState<Phase>('initial');
@@ -19,25 +21,22 @@ export default function MysticRevealOverlay() {
         return;
       }
     }
-    // Ensure component starts in initial phase if not hidden
-    setPhase('initial'); 
+    setPhase('initial'); // Start in initial phase
 
-    // Timer for when the fading out process begins
-    const fadeTimer = setTimeout(() => {
+    const timers: NodeJS.Timeout[] = [];
+
+    timers.push(setTimeout(() => setPhase('wandVisible'), 100)); // Wand appears quickly
+    timers.push(setTimeout(() => setPhase('bursting'), 600)); // Particles burst after wand is visible
+    timers.push(setTimeout(() => {
       setPhase('fading');
       if (typeof window !== 'undefined') {
         sessionStorage.setItem(MYSTIC_REVEAL_KEY, 'true');
       }
-    }, 1500); // Start fading after 1.5 seconds of full visibility
-
-    // Timer for when the component should be completely hidden and removed
-    const hideTimer = setTimeout(() => {
-      setPhase('hidden');
-    }, 1500 + 2000); // 1.5s visible + 2s fade duration = 3.5s total
+    }, 1600)); // Overlay starts fading after burst animation
+    timers.push(setTimeout(() => setPhase('hidden'), 2600)); // Fully hidden (1s fade)
 
     return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(hideTimer);
+      timers.forEach(clearTimeout);
     };
   }, []);
 
@@ -50,59 +49,69 @@ export default function MysticRevealOverlay() {
       aria-hidden="true"
       className={cn(
         "fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden pointer-events-none",
-        // Base overlay is slightly transparent to hint at content behind
-        "bg-slate-900/60 transition-opacity duration-[2000ms] ease-in-out", 
-        phase === 'fading' ? "opacity-0" : "opacity-100"
+        "bg-[#2C3E50] transition-opacity duration-1000ms ease-in-out", // Deep Slate Blue background
+        phase === 'fading' || phase === 'hidden' ? "opacity-0" : "opacity-100"
       )}
     >
-      {/* Cloud Layer 1 - Slower, larger, background */}
-      <div
+      {/* Central Wand Icon */}
+      <Wand2
         className={cn(
-          "absolute inset-0 bg-gradient-to-t from-slate-200/20 via-white/40 to-slate-100/30 blur-md",
-          "transition-all duration-[2000ms] ease-in-out",
-          phase === 'fading' 
-            ? "opacity-0 -translate-y-full scale-150" 
-            : "opacity-100 translate-y-0 scale-100"
+          "relative z-20 h-20 w-20 md:h-24 md:w-24 text-cyan-300",
+          "transition-all duration-500ms ease-out",
+          phase === 'initial' ? "opacity-0 scale-50" : "opacity-100 scale-100",
+          phase === 'wandVisible' || phase === 'bursting' ? "animate-pulse-glow" : ""
         )}
-        style={{ animationDelay: phase === 'fading' ? '0s' : '0s' }} // Start immediately with parent fade
+        style={{ animationDuration: '1.5s' }}
       />
-      {/* Cloud Layer 2 - Mid-ground, slightly faster */}
-      <div
-        className={cn(
-          "absolute inset-[-20%] bg-gradient-to-br from-white/50 via-slate-100/30 to-transparent",
-          "rounded-full blur-xl", 
-          "transition-all duration-[1800ms] ease-in-out",
-          phase === 'fading' 
-            ? "opacity-0 translate-y-3/4 scale-120" 
-            : "opacity-90 translate-y-0 scale-100"
-        )}
-         style={{ animationDelay: phase === 'fading' ? '0.2s' : '0s' }} // Stagger start
-      />
-      {/* Cloud Layer 3 - Foreground, fastest */}
-       <div
-        className={cn(
-          "absolute inset-[-10%] bg-gradient-to-tl from-white/60 via-slate-50/40 to-white/30",
-          "rounded-full blur-lg",
-          "transition-all duration-[1500ms] ease-in-out",
-           phase === 'fading' 
-            ? "opacity-0 translate-y-1/2 scale-110" 
-            : "opacity-100 translate-y-0 scale-100"
-        )}
-        style={{ animationDelay: phase === 'fading' ? '0.4s' : '0s' }} // Stagger start further
-      />
-      
-      {/* Sparkles in the center */}
-      <Sparkles 
-        className={cn(
-          "relative z-10 h-20 w-20 md:h-24 md:w-24 text-cyan-300/80", // Slightly more opaque sparkles
-          "transition-all duration-[1200ms] ease-out", // Sparkles fade a bit faster than clouds
-          phase === 'fading' 
-            ? "opacity-0 scale-150" 
-            : "opacity-100 scale-100 animate-pulse"
-        )}
-        style={{ animationDuration: '1.5s', animationDelay: phase === 'fading' ? '0s' : '0s' }}
-      />
+
+      {/* Particle Burst Container */}
+      {phase === 'bursting' && (
+        <div className="absolute z-10 flex items-center justify-center">
+          {Array.from({ length: NUM_PARTICLES }).map((_, i) => {
+            const angle = (i / NUM_PARTICLES) * 360 + (Math.random() * 30 - 15); // Angle for particle
+            const distance = 80 + Math.random() * 70; // Distance particle travels (vw/vh units for responsiveness)
+            const duration = 0.8 + Math.random() * 0.4; // Duration of particle animation
+            const delay = Math.random() * 0.2; // Stagger particle appearance
+
+            return (
+              <div
+                key={i}
+                className="absolute rounded-full bg-cyan-400 opacity-0"
+                style={{
+                  width: `${2 + Math.random() * 3}px`,
+                  height: `${2 + Math.random() * 3}px`,
+                  animation: `particle-burst ${duration}s ${delay}s ease-out forwards`,
+                  '--angle': `${angle}deg`,
+                  '--distance': `${distance}vmin`, // Use vmin for more consistent travel distance
+                } as React.CSSProperties}
+              />
+            );
+          })}
+        </div>
+      )}
+
+      {/* Inline styles for animations to avoid purging issues with dynamic class names */}
+      <style jsx global>{`
+        @keyframes pulse-glow {
+          0%, 100% { filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.7)) drop-shadow(0 0 10px rgba(0, 255, 255, 0.5)); transform: scale(1); }
+          50% { filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1)) drop-shadow(0 0 20px rgba(0, 255, 255, 0.7)); transform: scale(1.05); }
+        }
+        .animate-pulse-glow {
+          animation-name: pulse-glow;
+          animation-iteration-count: infinite;
+        }
+
+        @keyframes particle-burst {
+          0% {
+            opacity: 0.8;
+            transform: translate(0, 0) scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: rotate(var(--angle)) translateX(var(--distance)) scale(0.3);
+          }
+        }
+      `}</style>
     </div>
   );
 }
-
