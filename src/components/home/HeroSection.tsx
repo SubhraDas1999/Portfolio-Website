@@ -2,7 +2,7 @@
 'use client';
 import { Button } from "@/components/ui/button";
 import { HERO_INFO } from "@/lib/constants";
-import { ArrowDown } from "lucide-react";
+import { Wand2, Sparkles } from "lucide-react"; // Updated imports
 import Link from "next/link";
 import Image from "next/image";
 
@@ -52,17 +52,16 @@ const HeroSection = () => {
           <Button size="lg" asChild className="bg-primary text-primary-foreground hover:bg-primary/90 transform transition-transform hover:scale-105 shadow-lg">
             <Link href="#story">
               {HERO_INFO.cta}
-              <ArrowDown className="ml-2 h-5 w-5" />
+              <Wand2 className="ml-2 h-5 w-5" /> {/* Changed icon */}
             </Link>
           </Button>
         </div>
       </div>
        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-8 w-8 text-primary" />
+        <Sparkles className="h-8 w-8 text-primary" /> {/* Changed icon */}
       </div>
     </section>
   );
 };
 
 export default HeroSection;
-
