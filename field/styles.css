@@ -8,7 +8,8 @@ button,a { color:inherit } button { font:inherit; cursor:pointer } a { text-deco
 .nav-links { display:flex; gap:.85rem; font-size:.82rem; color:var(--muted) }
 .nav-cta { background:var(--pink); color:var(--on-pink); padding:.5rem .8rem; font-size:.8rem; font-weight:600; border:0 }
 .field { position:relative; height:min(88svh,720px); overflow:hidden; border-bottom:1px solid var(--line) }
-#field2d { position:absolute; inset:0; width:100%; height:100%; display:block }
+#field2d,#arena { position:absolute; inset:0; width:100%; height:100%; display:block }
+#field2d { z-index:0 } #arena { z-index:1 }
 .win { display:none !important } .win.show { display:flex !important; gap:.6rem; flex-wrap:wrap }
 .hud { position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:1rem; pointer-events:none }
 .hud > * { pointer-events:auto }
