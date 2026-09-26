@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subhra Pratik Das — The Field</title>
+  <meta name="description" content="Associate product manager at Mosambee. Built Zyadashop from zero to 100K+ downloads, sold Appyflux, then shipped Mod91." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="scan" aria-hidden="true"></div>
+  <header class="nav">
+    <div class="brand">SPD <span>Mosambee · Mumbai</span></div>
+    <nav class="nav-links">
+      <a href="#field">Field</a>
+      <a href="#mod91">Mod91</a>
+      <a href="#zyadashop">Zyadashop</a>
+      <a href="#work">Work</a>
+      <a href="#record">Record</a>
+    </nav>
+    <a class="nav-cta" href="mailto:subhrapratikdas@gmail.com">Email</a>
+  </header>
+  <section class="field" id="field">
+    <canvas id="field2d"></canvas>
+    <canvas id="arena"></canvas>
+    <div class="flash" id="flash"></div>
+    <div class="hud">
+      <div class="row">
+        <div>
+          <p class="call move" id="call">Move.</p>
+          <p class="hint" id="hint">Hold to run. Let go the moment the figure turns. If you are still moving when it looks, you drop to the last mark.</p>
+        </div>
+        <div class="pct" id="pct">0</div>
+      </div>
+      <div>
+        <p class="mark" id="mark">The field is open. Mumbai.</p>
+        <div class="bar" id="bar"><i id="barFill"></i></div>
+        <div class="actions">
+          <button class="hold" id="hold" type="button">Hold to run</button>
+          <div id="winRow" class="actions win">
+            <button class="hold" id="copyNote" type="button">Copy the note</button>
+            <a class="ghost" href="mailto:subhrapratikdas@gmail.com">subhrapratikdas@gmail.com</a>
+          </div>
+          <a class="skip" href="#mod91">Skip to the record</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="metrics">
+    <div><b>100K+</b><span>Downloads, then acquired</span></div>
+    <div><b>10→5</b><span>Onboarding steps</span></div>
+    <div><b>60→10</b><span>Minutes on Apex</span></div>
+    <div><b>1/350</b><span>NextLeap rank</span></div>
+  </div>
+  <section class="section" id="mod91">
+    <div class="wrap">
+      <p class="kicker">Round 01 · Mosambee</p>
+      <h2>The merchant stack</h2>
+      <p class="lede">He sold the company. Then he built the acquirer’s merchant app. That is the job now.</p>
+      <div class="grid-2">
+        <div class="tabs" role="tablist">
+          <button class="on" data-mod="mod91" type="button">Mod91 <span>01</span></button>
+          <button data-mod="apex" type="button">Apex <span>02</span></button>
+          <button data-mod="soundbox" type="button">Soundbox + QR <span>03</span></button>
+        </div>
+        <div class="panel" id="modBody">
+          <p class="kicker">June 2022 — present</p>
+          <h3>Mod91</h3>
+          <p>Mosambee’s merchant app, taken from nothing to the Play Store. Onboarding was about 10 steps. It is about 5.</p>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:1.2rem">
+        <div class="row">
+          <div>
+            <p class="kicker">Onboarding</p>
+            <h3 id="cutTitle">About 10 steps</h3>
+          </div>
+          <button class="hold" id="cutBtn" type="button">Cut it to 5</button>
+        </div>
+        <ul class="cut-rows" id="cutList" data-tight="0">
+          <li>01 <i></i> Kept</li>
+          <li>02 <i></i> Kept</li>
+          <li>03 <i></i> Kept</li>
+          <li>04 <i></i> Kept</li>
+          <li>05 <i></i> Kept</li>
+          <li>06 <i></i> Asks again</li>
+          <li>07 <i></i> Asks again</li>
+          <li>08 <i></i> Asks again</li>
+          <li>09 <i></i> Asks again</li>
+          <li>10 <i></i> Asks again</li>
+        </ul>
+        <p class="lede" style="margin-top:1rem">CKYC pulls identity. If it misses, there is a manual fallback. Auto-fill types less. QR, Soundbox, and the plan sit on the same flow.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="zyadashop">
+    <div class="wrap">
+      <p class="kicker">Round 02 · Appyflux</p>
+      <h2>One shop. Then a hundred thousand.</h2>
+      <p class="lede">Co-founded Appyflux. Built Zyadashop. Mosambee bought the company in June 2022.</p>
+      <div class="years">
+        <button class="on" data-year="2020" type="button">2020</button>
+        <button data-year="2021" type="button">2021</button>
+        <button data-year="2022" type="button">2022</button>
+      </div>
+      <div class="panel">
+        <p id="yearBody">April 2020. One shop. Month one: 4,000 merchants, and 70% of people who started signup finished.</p>
+      </div>
+      <div class="stair-stage" aria-hidden="true">
+        <div class="step on" style="left:2%; top:68%"><small>01</small><strong>The floor</strong></div>
+        <div class="step" style="left:16%; top:56%"><small>02</small><strong>Month one</strong></div>
+        <div class="step" style="left:30%; top:44%"><small>03</small><strong>100K+</strong></div>
+        <div class="step" style="left:44%; top:32%"><small>04</small><strong>Sold</strong></div>
+        <div class="step" style="left:58%; top:20%"><small>05</small><strong>Mod91</strong></div>
+        <div class="step" style="left:72%; top:8%"><small>06</small><strong>Apex</strong></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="work">
+    <div class="wrap">
+      <p class="kicker">Round 03 · Built and studied</p>
+      <h2>The work</h2>
+      <p class="lede">Fellowship decks from NextLeap, plus two things shipped after.</p>
+      <div class="cards">
+        <a class="card" href="https://careerflow-ai.vercel.app" target="_blank" rel="noreferrer"><em>Shipped</em><h3>CareerFlow AI</h3><p>A career product he built and published.</p></a>
+        <a class="card" href="https://github.com/SubhraDas1999/pasteguard" target="_blank" rel="noreferrer"><em>Shipped</em><h3>pasteguard</h3><p>Local command firewall for humans and AI agents. Offline. No API key.</p></a>
+        <a class="card" href="https://nextleap.app/portfolio/subhra-das" target="_blank" rel="noreferrer"><em>Graduation</em><h3>BookMyShow</h3><p>Graduation deck. Auction, then DigiLocker. Score 274/300.</p></a>
+        <a class="card" href="https://nextleap.app/portfolio/subhra-das" target="_blank" rel="noreferrer"><em>Case</em><h3>Zomato</h3><p>Fellowship cases on the NextLeap record.</p></a>
+        <a class="card" href="https://nextleap.app/portfolio/subhra-das" target="_blank" rel="noreferrer"><em>Case</em><h3>Maps, Goibibo, CRED</h3><p>Product teardowns and opportunity briefs from the fellowship.</p></a>
+        <a class="card" href="https://nextleap.app/portfolio/subhra-das" target="_blank" rel="noreferrer"><em>Fellowship</em><h3>NextLeap portfolio</h3><p>The full set of uploaded decks, in one place.</p></a>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="record">
+    <div class="wrap record">
+      <div>
+        <p class="kicker">Record</p>
+        <h2>Subhra Pratik Das</h2>
+        <p class="lede">Associate product manager, Mosambee. Mumbai. NextLeap top fellow, rank 1 of 350+.</p>
+        <ul class="plain">
+          <li>Appyflux founder → Zyadashop → acquired by Mosambee, June 2022</li>
+          <li>Mod91, 0 → Play Store. Onboarding about 10 → about 5</li>
+          <li>Apex: 60 min → 10 min. Approvals 2–3 days → 12–24 hours</li>
+          <li>Google Play Best Apps of 2022, India, Hidden Gems</li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker">Reach him</p>
+        <div class="actions" style="margin-top:1rem">
+          <a class="hold" href="mailto:subhrapratikdas@gmail.com">Email</a>
+          <a class="ghost" href="https://www.linkedin.com/in/subhradas1999/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="ghost" href="https://nextleap.app/portfolio/subhra-das" target="_blank" rel="noreferrer">NextLeap</a>
+          <a class="ghost" href="https://github.com/SubhraDas1999" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="wrap foot">
+    <span>The Field · original arena, not a licensed show.</span>
+    <span>Subhra Pratik Das</span>
+  </footer>
+  <script src="https://unpkg.com/three@0.161.0/build/three.min.js"></script>
+  <script src="./arena.js"></script>
+</body>
+</html>
